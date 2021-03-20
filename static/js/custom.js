@@ -6,7 +6,10 @@ function handleClick(){
 }
 
 function processNames(data){
+    const nameList = document.getElementById("nameList")
     for (let i of data["names"]){
-        console.log(i)
+        const listElement = document.createElement("li")
+        listElement.innerText = i
+        nameList.appendChild(listElement)
     }
 }
