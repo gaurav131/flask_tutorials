@@ -5,6 +5,10 @@
     <title>IOT with flask</title>
 </head>
 <body>
-<h1>My name is: - {{ ",".join(names) }}</h1>
+<ol>
+    {% for i in names[::-1] %}
+        <li>name: - {{ i }}</li>
+    {% endfor %}
+</ol>
 </body>
 </html>
