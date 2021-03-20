@@ -1,0 +1,6 @@
+#editor config
+/.vscode
+/.idea
+
+#virtual environments
+/venv
