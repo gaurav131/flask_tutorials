@@ -3,10 +3,15 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
+@app.route("/")
+def root():
+    return render_template("home.html")
+
+
 @app.route("/<name>")
-def root(name):
+def names(name):
     a = ["sai", "naresh", "sreekanth", "vijay", "vinay"] + [name]
-    return render_template("home.html", names=a)
+    return {"names": a}
 
 
 if __name__ == "__main__":
